@@ -6,10 +6,6 @@ plugins {
     kotlin("android.extensions")
 }
 
-apply {
-    from("dependencies.gradle.kts")
-}
-
 android {
     compileSdkVersion(29)
     buildToolsVersion = "29.0.2"

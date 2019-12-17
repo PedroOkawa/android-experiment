@@ -1,9 +1,8 @@
 extra.apply {
     set("kotlinVersion", "1.3.61")
-    set("appCompatVersion", "1.1.0")
 
     val kotlinVersion: String by extra
-    val appCompatVersion: String by extra
+    val appCompatVersion = "1.1.0"
     val coreKtxVersion = "1.1.0"
     val uiFrameworkVersion = "0.1.0-dev03"
     val uiLayoutVersion = "0.1.0-dev03"
