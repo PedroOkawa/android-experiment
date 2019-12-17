@@ -1,7 +1,13 @@
+import com.android.build.gradle.internal.packaging.fromProjectProperties
+
 plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("android.extensions")
+}
+
+apply {
+    from("dependencies.gradle.kts")
 }
 
 android {
@@ -36,17 +42,11 @@ android {
     }
 
 }
-
 dependencies {
+    val mainDependencies: Array<String> by rootProject.extra
+
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
-    implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("androidx.core:core-ktx:1.1.0")
-    implementation("androidx.ui:ui-framework:0.1.0-dev03")
-    implementation("androidx.ui:ui-layout:0.1.0-dev03")
-    implementation("androidx.ui:ui-material:0.1.0-dev03")
-    implementation("androidx.ui:ui-tooling:0.1.0-dev03")
-    testImplementation("junit:junit:4.12")
-    androidTestImplementation("androidx.test.ext:junit:1.1.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
+    mainDependencies.forEach { dependency ->
+        implementation(dependency)
+    }
 }
