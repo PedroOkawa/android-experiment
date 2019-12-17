@@ -28,6 +28,8 @@ bintray_push
 
 # Android Studio
 .idea/
+.idea/*.*
+/.idea/*.*
 .gradle
 /*/local.properties
 /*/out
