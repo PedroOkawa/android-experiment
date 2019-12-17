@@ -40,9 +40,13 @@ android {
 }
 dependencies {
     val mainDependencies: Array<String> by rootProject.extra
+    val testDependencies: Array<String> by rootProject.extra
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     mainDependencies.forEach { dependency ->
+        implementation(dependency)
+    }
+    testDependencies.forEach { dependency ->
         implementation(dependency)
     }
 }

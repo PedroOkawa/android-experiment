@@ -5,13 +5,14 @@ apply {
 }
 
 buildscript {
+
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.0.0-alpha06")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61")
+        classpath(kotlin(module = "gradle-plugin", version = Versions.kotlin))
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

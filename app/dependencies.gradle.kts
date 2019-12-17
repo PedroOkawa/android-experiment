@@ -1,30 +1,20 @@
 extra.apply {
-    set("kotlinVersion", "1.3.61")
-
-    val kotlinVersion: String by extra
-    val appCompatVersion = "1.1.0"
-    val coreKtxVersion = "1.1.0"
-    val uiFrameworkVersion = "0.1.0-dev03"
-    val uiLayoutVersion = "0.1.0-dev03"
-    val uiMaterialVersion = "0.1.0-dev03"
-    val uiToolingVersion = "0.1.0-dev03"
-    val jUnitVersion = "4.12"
-    val jUnitExtVersion = "1.1.1"
-    val espressoCoreVersion = "3.2.0"
-
     val mainDependencies = arrayOf(
-        "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
-        "androidx.appcompat:appcompat:$appCompatVersion",
-        "androidx.core:core-ktx:$coreKtxVersion",
-        "androidx.core:core-ktx:$coreKtxVersion",
-        "androidx.ui:ui-framework:$uiFrameworkVersion",
-        "androidx.ui:ui-layout:$uiLayoutVersion",
-        "androidx.ui:ui-material:$uiMaterialVersion",
-        "androidx.ui:ui-tooling:$uiToolingVersion",
-        "junit:junit:$jUnitVersion",
-        "androidx.test.ext:junit:$jUnitExtVersion",
-        "androidx.test.espresso:espresso-core:$espressoCoreVersion"
+        "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61",
+        "androidx.appcompat:appcompat:${Versions.appCompat}",
+        "androidx.core:core-ktx:${Versions.coreKtx}",
+        "androidx.ui:ui-framework:${Versions.uiFramework}",
+        "androidx.ui:ui-layout:${Versions.uiLayout}",
+        "androidx.ui:ui-material:${Versions.uiMaterial}",
+        "androidx.ui:ui-tooling:${Versions.uiTooling}"
+    )
+
+    val testDependencies = arrayOf(
+        "junit:junit:${Versions.jUnit}",
+        "androidx.test.ext:junit:${Versions.jUnitExt}",
+        "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     )
 
     set("mainDependencies", mainDependencies)
+    set("testDependencies", testDependencies)
 }
