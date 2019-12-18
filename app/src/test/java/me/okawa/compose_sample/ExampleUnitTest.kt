@@ -1,4 +1,4 @@
-package me.okawa.compose_sample
+package me.okawa.androidexperiment
 
 import org.junit.Test
 

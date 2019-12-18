@@ -11,7 +11,7 @@ android {
     buildToolsVersion = "29.0.2"
 
     defaultConfig {
-        applicationId = "me.okawa.compose_sample"
+        applicationId = "me.okawa.androidexperiment"
         minSdkVersion(21)
         targetSdkVersion(29)
         versionCode = 1

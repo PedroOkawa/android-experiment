@@ -1,4 +1,4 @@
-package me.okawa.compose_sample
+package me.okawa.androidexperiment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
