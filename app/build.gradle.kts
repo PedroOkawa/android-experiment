@@ -1,5 +1,3 @@
-import com.android.build.gradle.internal.packaging.fromProjectProperties
-
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -36,17 +34,21 @@ android {
     buildFeatures {
         compose = true
     }
+    dynamicFeatures = mutableSetOf(":home")
 
 }
-dependencies {
-    val mainDependencies: Array<String> by rootProject.extra
-    val testDependencies: Array<String> by rootProject.extra
 
+dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    mainDependencies.forEach { dependency ->
+    implementation(project(":data"))
+
+    AppDependencies.implementation.forEach { dependency ->
         implementation(dependency)
     }
-    testDependencies.forEach { dependency ->
-        implementation(dependency)
+    AppDependencies.testImplementation.forEach { dependency ->
+        testImplementation(dependency)
+    }
+    AppDependencies.androidTestImplementation.forEach { dependency ->
+        androidTestImplementation(dependency)
     }
 }
