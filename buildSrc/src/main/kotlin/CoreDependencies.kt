@@ -1,15 +1,13 @@
-object AppDependencies {
+object CoreDependencies {
     val implementation = arrayOf(
         Dependencies.appCompat,
         Dependencies.kodeinJvm,
         Dependencies.kodeinAndroidX,
         Dependencies.kotlinExtensions,
-        Dependencies.rxAndroid,
-        Dependencies.rxJava,
-        Dependencies.uiFramework,
-        Dependencies.uiLayout,
-        Dependencies.uiMaterial,
-        Dependencies.uiTooling
+        Dependencies.okHttpLoggingInterceptor,
+        Dependencies.retrofit,
+        Dependencies.retrofitGsonConverter,
+        Dependencies.retrofitRxAdapter
     )
 
     val testImplementation = arrayOf(

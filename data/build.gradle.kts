@@ -7,6 +7,10 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(project(":domain"))
 
+    DataDependencies.dataApi.forEach { dependency ->
+        api(dependency)
+    }
+
     DataDependencies.dataImplementation.forEach { dependency ->
         implementation(dependency)
     }

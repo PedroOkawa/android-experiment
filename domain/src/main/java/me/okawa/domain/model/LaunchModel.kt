@@ -2,7 +2,7 @@ package me.okawa.domain.model
 
 import java.util.*
 
-data class FlightModel(
+data class LaunchModel(
     val flightNumber: Int,
     val missionName: String,
     val missionId: List<String>,

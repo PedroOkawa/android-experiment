@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("android.extensions")
 }
@@ -9,12 +9,12 @@ android {
     buildToolsVersion = "29.0.2"
 
     defaultConfig {
-        applicationId = "me.okawa.androidexperiment"
         minSdkVersion(21)
         targetSdkVersion(29)
         versionCode = 1
         versionName = "1.0"
 
+        consumerProguardFiles("consumer-rules.pro")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -31,25 +31,19 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
-    }
-    dynamicFeatures = mutableSetOf(":home")
-
 }
 
 dependencies {
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(project(":core"))
+    implementation(project(":data"))
     implementation(project(":domain"))
 
-    AppDependencies.implementation.forEach { dependency ->
+    CoreDependencies.implementation.forEach { dependency ->
         implementation(dependency)
     }
-    AppDependencies.testImplementation.forEach { dependency ->
+    CoreDependencies.testImplementation.forEach { dependency ->
         testImplementation(dependency)
     }
-    AppDependencies.androidTestImplementation.forEach { dependency ->
+    CoreDependencies.androidTestImplementation.forEach { dependency ->
         androidTestImplementation(dependency)
     }
 }

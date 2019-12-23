@@ -1,25 +1,39 @@
 package me.okawa.data.entity
 
-import me.okawa.domain.model.FlightModel
+import com.google.gson.annotations.SerializedName
+import me.okawa.domain.model.LaunchModel
 import java.util.*
 
-data class FlightEntity(
+data class LaunchEntity(
+    @SerializedName("flight_number")
     val flightNumber: Int?,
+    @SerializedName("mission_name")
     val missionName: String?,
+    @SerializedName("mission_id")
     val missionId: List<String>?,
+    @SerializedName("upcoming")
     val upcoming: Boolean?,
+    @SerializedName("launch_year")
     val launchYear: String?,
+    @SerializedName("launch_date")
     val launchDate: Date?,
+    @SerializedName("is_tentative")
     val isTentative: Boolean?,
+    @SerializedName("tentative_max_precision")
     val tentativeMaxPrecision: String?,
+    @SerializedName("to_be_deployed")
     val toBeDeployed: Boolean?,
+    @SerializedName("rocket")
     val rocket: RocketEntity?,
+    @SerializedName("launch_success")
     val launchSuccess: Boolean?,
+    @SerializedName("details")
     val details: String?,
+    @SerializedName("links")
     val links: LinksEntity?
 ) {
-    fun mapToDomain(): FlightModel {
-        return FlightModel(
+    fun mapToDomain(): LaunchModel {
+        return LaunchModel(
             flightNumber ?: 0,
             missionName.orEmpty(),
             missionId.orEmpty(),
