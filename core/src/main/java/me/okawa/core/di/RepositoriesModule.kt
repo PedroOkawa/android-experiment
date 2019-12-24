@@ -1,4 +1,4 @@
-package me.okawa.core
+package me.okawa.core.di
 
 import me.okawa.data.api.SpaceXApi
 import me.okawa.data.repository.LaunchesRepositoryImpl
@@ -11,7 +11,11 @@ import org.kodein.di.generic.singleton
 private const val MODULE_NAME = "Repositories Module"
 
 val repositoriesModule = Kodein.Module(MODULE_NAME) {
-    bind<LaunchesRepository>() with singleton { retrieveLaunchesRepository(instance()) }
+    bind<LaunchesRepository>() with singleton {
+        retrieveLaunchesRepository(
+            instance()
+        )
+    }
 }
 
 private fun retrieveLaunchesRepository(spaceXApi: SpaceXApi): LaunchesRepository {

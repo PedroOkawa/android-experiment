@@ -1,4 +1,4 @@
-package me.okawa.core
+package me.okawa.core.di
 
 import me.okawa.domain.repository.LaunchesRepository
 import me.okawa.domain.usecase.LaunchesUseCase
@@ -10,7 +10,11 @@ import org.kodein.di.generic.singleton
 private const val MODULE_NAME = "Use Cases Module"
 
 val useCasesModule = Kodein.Module(MODULE_NAME) {
-    bind<LaunchesUseCase>() with singleton { retrieveLaunchesUseCase(instance()) }
+    bind<LaunchesUseCase>() with singleton {
+        retrieveLaunchesUseCase(
+            instance()
+        )
+    }
 }
 
 private fun retrieveLaunchesUseCase(launchesRepository: LaunchesRepository): LaunchesUseCase {

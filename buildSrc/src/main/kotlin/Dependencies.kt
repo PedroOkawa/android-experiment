@@ -1,5 +1,6 @@
 object Dependencies {
-    const val androidJUnit = "androidx.test.ext:junit:${Versions.jUnitExt}"
+    const val androidJUnit = "androidx.test.ext:junit:${Versions.androidJUnitExt}"
+    const val androidLifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.androidLifecycleExtensions}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     const val gson = "com.google.code.gson:gson:${Versions.gson}"

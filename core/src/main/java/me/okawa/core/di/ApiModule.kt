@@ -1,4 +1,4 @@
-package me.okawa.core
+package me.okawa.core.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -20,8 +20,17 @@ private const val DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'"
 val networkModule = Kodein.Module(MODULE_NAME) {
     bind<OkHttpClient>() with singleton { retrieveOkHttpClient() }
     bind<Gson>() with singleton { retrieveGson() }
-    bind<Retrofit>() with singleton { retrieveRetrofit(instance(), instance()) }
-    bind<SpaceXApi>() with singleton { retrieveSpaceXApi(instance()) }
+    bind<Retrofit>() with singleton {
+        retrieveRetrofit(
+            instance(),
+            instance()
+        )
+    }
+    bind<SpaceXApi>() with singleton {
+        retrieveSpaceXApi(
+            instance()
+        )
+    }
 }
 
 private fun retrieveOkHttpClient(): OkHttpClient {

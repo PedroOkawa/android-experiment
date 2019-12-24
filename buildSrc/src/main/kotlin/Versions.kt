@@ -1,10 +1,11 @@
 object Versions {
+    const val androidJUnitExt = "1.1.1"
+    const val androidLifecycleExtensions = "2.1.0"
     const val appCompat = "1.1.0"
     const val coreKtx = "1.1.0"
     const val espressoCore = "3.2.0"
     const val gson = "2.8.6"
     const val jUnit = "4.12"
-    const val jUnitExt = "1.1.1"
     const val kodein = "5.2.0"
     const val kotlin = "1.3.61"
     const val okHttpLoggingInterceptorVersion = "4.2.2"
