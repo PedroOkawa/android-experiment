@@ -17,22 +17,25 @@ import me.okawa.androidexperiment.model.Launch
 import me.okawa.core.ui.ViewState
 
 sealed class HomeViewState : ViewState
+
 data class ShowLaunches(val launches: List<Launch>): HomeViewState() {
     override fun buildUI() {
         launchesListView(launches)
     }
 }
+
 data class NetworkError(val message: String): HomeViewState() {
     override fun buildUI() {
         errorView(message)
     }
 }
+
 data class GenericError(val message: String): HomeViewState() {
     override fun buildUI() {
         errorView(message)
     }
-
 }
+
 @Composable
 private fun launchesListView(launches: List<Launch>) {
     VerticalScroller {
