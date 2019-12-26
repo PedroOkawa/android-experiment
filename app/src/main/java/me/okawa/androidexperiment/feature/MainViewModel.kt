@@ -79,11 +79,8 @@ class MainViewModel(private val launchesUseCase: LaunchesUseCase) : ViewModel() 
         @Composable
         fun newLaunch(launch: Launch) {
             Column(modifier = Spacing(8.dp)) {
-                Container(expanded = true) {
-                    Surface(color = Color.Gray) {
-                        Text(launch.details, maxLines = 3)
-                    }
-                }
+                Text(launch.missionName, maxLines = 1)
+                Text(launch.details, maxLines = 3)
             }
         }
     }
