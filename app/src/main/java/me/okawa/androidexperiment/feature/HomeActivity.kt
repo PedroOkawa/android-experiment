@@ -1,4 +1,4 @@
-package me.okawa.androidexperiment
+package me.okawa.androidexperiment.feature
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,24 +7,23 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.ui.core.setContent
 import androidx.ui.material.MaterialTheme
 import me.okawa.androidexperiment.di.viewModelsModule
-import me.okawa.androidexperiment.feature.MainViewModel
-import me.okawa.androidexperiment.di.MainViewModelFactory
-import me.okawa.androidexperiment.feature.MainViewModel.*
+import me.okawa.androidexperiment.di.HomeViewModelFactory
+import me.okawa.androidexperiment.utils.retrieveKodein
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.generic.instance
 
-class MainActivity : AppCompatActivity(), KodeinAware {
+class HomeActivity : AppCompatActivity(), KodeinAware {
 
     override val kodein = Kodein.lazy {
         extend(retrieveKodein())
         import(viewModelsModule)
     }
 
-    private val mainViewModeFactory: MainViewModelFactory by instance()
+    private val homeViewModeFactory: HomeViewModelFactory by instance()
 
-    private val viewModel: MainViewModel by lazy {
-        ViewModelProviders.of(this, mainViewModeFactory).get(MainViewModel::class.java)
+    private val viewModel: HomeViewModel by lazy {
+        ViewModelProviders.of(this, homeViewModeFactory).get(HomeViewModel::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,12 +32,10 @@ class MainActivity : AppCompatActivity(), KodeinAware {
     }
 
     private fun setupViewModel() {
-        with(viewModel) {
-            viewState.observe(this@MainActivity, Observer<ViewState> { launches -> onViewState(launches) })
-        }
+        viewModel.viewState.observe(this@HomeActivity, Observer<HomeViewState> { launches -> onViewState(launches) })
     }
 
-    private fun onViewState(viewState: ViewState?) {
+    private fun onViewState(viewState: HomeViewState?) {
         setContent {
             MaterialTheme {
                 viewState?.buildUI()

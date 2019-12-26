@@ -8,9 +8,9 @@ import org.kodein.di.generic.singleton
 private const val MODULE_NAME = "View Models Module"
 
 val viewModelsModule = Kodein.Module(MODULE_NAME) {
-    bind<MainViewModelFactory>() with singleton { retrieveMainViewModelFactory(instance()) }
+    bind<HomeViewModelFactory>() with singleton { retrieveMainViewModelFactory(instance()) }
 }
 
-private fun retrieveMainViewModelFactory(kodein: Kodein): MainViewModelFactory {
-    return MainViewModelFactory(kodein)
+private fun retrieveMainViewModelFactory(kodein: Kodein): HomeViewModelFactory {
+    return HomeViewModelFactory(kodein)
 }
