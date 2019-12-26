@@ -4,6 +4,6 @@ import me.okawa.domain.model.LaunchModel
 
 interface LaunchesRepository {
 
-    suspend fun getFlights(): Result<List<LaunchModel>>
+    suspend fun getLaunches(): Result<List<LaunchModel>>
 
 }

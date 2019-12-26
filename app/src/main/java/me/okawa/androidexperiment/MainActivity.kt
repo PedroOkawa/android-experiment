@@ -2,13 +2,10 @@ package me.okawa.androidexperiment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.Composable
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.ui.core.Text
 import androidx.ui.core.setContent
 import androidx.ui.material.MaterialTheme
-import androidx.ui.tooling.preview.Preview
 import me.okawa.androidexperiment.di.viewModelsModule
 import me.okawa.androidexperiment.feature.MainViewModel
 import me.okawa.androidexperiment.di.MainViewModelFactory
@@ -32,34 +29,20 @@ class MainActivity : AppCompatActivity(), KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            MaterialTheme {
-                Greeting("Android")
-            }
-        }
         setupViewModel()
     }
 
     private fun setupViewModel() {
         with(viewModel) {
-            launches.observe(this@MainActivity, Observer<State> { launches -> onState(launches) })
+            viewState.observe(this@MainActivity, Observer<ViewState> { launches -> onViewState(launches) })
         }
     }
 
-    private fun onState(state: State?) {
-
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    MaterialTheme {
-        Greeting("Android")
+    private fun onViewState(viewState: ViewState?) {
+        setContent {
+            MaterialTheme {
+                viewState?.buildUI()
+            }
+        }
     }
 }

@@ -10,7 +10,11 @@ class LaunchesRepositoryImpl constructor(
     private val spaceXApi: SpaceXApi
 ) : BaseRepository(), LaunchesRepository {
 
-    override suspend fun getFlights(): Result<List<LaunchModel>> {
-        return callApi(Dispatchers.IO) { spaceXApi.getFlights().map { it.mapToDomain() } }
+    override suspend fun getLaunches(): Result<List<LaunchModel>> {
+        return callApi(Dispatchers.IO) {
+            spaceXApi.getLaunches().map { launchEntity ->
+                launchEntity.mapToDomain()
+            }
+        }
     }
 }

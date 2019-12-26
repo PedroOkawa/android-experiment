@@ -6,6 +6,6 @@ import retrofit2.http.GET
 interface SpaceXApi {
 
     @GET("launches")
-    suspend fun getFlights(): List<LaunchEntity>
+    suspend fun getLaunches(): List<LaunchEntity>
 
 }

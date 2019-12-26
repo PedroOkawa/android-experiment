@@ -15,6 +15,7 @@ object Dependencies {
     const val okHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttpLoggingInterceptorVersion}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    const val uiFoundation = "androidx.ui:ui-foundation:${Versions.uiFoundation}"
     const val uiFramework = "androidx.ui:ui-framework:${Versions.uiFramework}"
     const val uiLayout = "androidx.ui:ui-layout:${Versions.uiLayout}"
     const val uiMaterial = "androidx.ui:ui-material:${Versions.uiMaterial}"

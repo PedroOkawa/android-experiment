@@ -7,7 +7,7 @@ import me.okawa.domain.repository.Result
 class LaunchesUseCase constructor(private val launchesRepository: LaunchesRepository) {
 
     suspend fun retrieveLaunches(): Result<List<LaunchModel>> {
-        return launchesRepository.getFlights()
+        return launchesRepository.getLaunches()
     }
 
 }

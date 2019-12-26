@@ -7,6 +7,7 @@ object AppDependencies {
         Dependencies.kodeinJvm,
         Dependencies.kodeinAndroidX,
         Dependencies.kotlinExtensions,
+        Dependencies.uiFoundation,
         Dependencies.uiFramework,
         Dependencies.uiLayout,
         Dependencies.uiMaterial,

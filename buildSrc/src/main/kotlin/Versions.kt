@@ -11,6 +11,7 @@ object Versions {
     const val kotlin = "1.3.61"
     const val okHttpLoggingInterceptorVersion = "4.2.2"
     const val retrofit = "2.7.0"
+    const val uiFoundation = "0.1.0-dev03"
     const val uiFramework = "0.1.0-dev03"
     const val uiLayout = "0.1.0-dev03"
     const val uiMaterial = "0.1.0-dev03"
