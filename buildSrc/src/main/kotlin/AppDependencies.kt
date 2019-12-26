@@ -2,11 +2,11 @@ object AppDependencies {
     val implementation = arrayOf(
         Dependencies.appCompat,
         Dependencies.androidLifecycleExtensions,
+        Dependencies.androidLiveData,
+        Dependencies.androidViewModel,
         Dependencies.kodeinJvm,
         Dependencies.kodeinAndroidX,
         Dependencies.kotlinExtensions,
-        Dependencies.rxAndroid,
-        Dependencies.rxJava,
         Dependencies.uiFramework,
         Dependencies.uiLayout,
         Dependencies.uiMaterial,

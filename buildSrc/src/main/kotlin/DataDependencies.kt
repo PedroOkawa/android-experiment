@@ -1,7 +1,7 @@
 object DataDependencies {
     val dataImplementation = arrayOf(
+        Dependencies.coroutines,
         Dependencies.kotlin,
-        Dependencies.rxJava,
         Dependencies.retrofit
     )
     val dataApi = arrayOf(

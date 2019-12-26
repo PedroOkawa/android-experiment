@@ -1,12 +1,12 @@
 package me.okawa.domain.usecase
 
-import io.reactivex.Single
 import me.okawa.domain.model.LaunchModel
 import me.okawa.domain.repository.LaunchesRepository
+import me.okawa.domain.repository.Result
 
 class LaunchesUseCase constructor(private val launchesRepository: LaunchesRepository) {
 
-    fun retrieveLaunches(): Single<List<LaunchModel>> {
+    suspend fun retrieveLaunches(): Result<List<LaunchModel>> {
         return launchesRepository.getFlights()
     }
 

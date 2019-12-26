@@ -6,9 +6,7 @@ object CoreDependencies {
         Dependencies.kotlinExtensions,
         Dependencies.okHttpLoggingInterceptor,
         Dependencies.retrofit,
-        Dependencies.retrofitGsonConverter,
-        Dependencies.retrofitRxAdapter,
-        Dependencies.rxAndroid
+        Dependencies.retrofitGsonConverter
     )
 
     val testImplementation = arrayOf(
