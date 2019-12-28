@@ -36,9 +36,7 @@ class HomeActivity : AppCompatActivity(), KodeinAware {
 
     private fun onViewState(viewState: HomeViewState?) {
         setContent {
-            MaterialTheme {
-                viewState?.buildUI()
-            }
+            MaterialTheme { viewState?.buildUI() }
         }
     }
 }

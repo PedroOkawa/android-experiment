@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Style -->
     <color name="colorPrimary">@color/color_black_4A4A4A</color>
     <color name="colorPrimaryDark">@color/color_black_2A2A2A</color>
     <color name="colorAccent">@color/color_white_FEFEFE</color>
 
+    <!-- Launches -->
     <color name="color_background_launches_view">@color/color_white_F1F1F1</color>
     <color name="color_background_launch_view">@color/color_white_FEFEFE</color>
     <color name="color_text_launch_view">@color/color_grey_A1A1A1</color>
 
+    <!-- Colors -->
     <color name="color_black_4A4A4A">#4A4A4A</color>
     <color name="color_black_2A2A2A">#2A2A2A</color>
     <color name="color_grey_A1A1A1">#A1A1A1</color>
