@@ -22,7 +22,7 @@ data class Launch(
 fun LaunchModel.mapToPresentation(): Launch {
     return Launch(
         flightNumber,
-        missionName,
+        missionName.ifEmpty { "N/A" },
         missionId,
         upcoming,
         launchYear,
@@ -32,7 +32,7 @@ fun LaunchModel.mapToPresentation(): Launch {
         toBeDeployed,
         rocket?.mapToPresentation(),
         launchSuccess,
-        details,
+        details.ifEmpty { "N/A" },
         links?.mapToPresentation()
     )
 }

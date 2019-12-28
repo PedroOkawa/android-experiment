@@ -15,10 +15,10 @@ data class LinksEntity(
 ) {
     fun mapToDomain() : LinksModel {
         return LinksModel(
-            missionPatch.orEmpty(),
-            missionPatchSmall.orEmpty(),
-            articleLink.orEmpty(),
-            youtubeId.orEmpty()
+            missionPatch,
+            missionPatchSmall,
+            articleLink,
+            youtubeId
         )
     }
 }

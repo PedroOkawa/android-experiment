@@ -14,7 +14,6 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.generic.instance
 
 class HomeActivity : AppCompatActivity(), KodeinAware {
-
     override val kodein = Kodein.lazy {
         extend(retrieveKodein())
         import(viewModelsModule)

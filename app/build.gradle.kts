@@ -35,7 +35,6 @@ android {
         compose = true
     }
     dynamicFeatures = mutableSetOf(":home")
-
 }
 
 dependencies {

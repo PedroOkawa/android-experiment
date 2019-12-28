@@ -5,6 +5,8 @@ object Versions {
     const val coreKtx = "1.1.0"
     const val coroutines = "1.3.3"
     const val espressoCore = "3.2.0"
+    const val coil = "0.8.0"
+    const val gradle = "4.0.0-alpha07"
     const val gson = "2.8.6"
     const val jUnit = "4.12"
     const val kodein = "5.2.0"

@@ -4,6 +4,7 @@ object AppDependencies {
         Dependencies.androidLifecycleExtensions,
         Dependencies.androidLiveData,
         Dependencies.androidViewModel,
+        Dependencies.coil,
         Dependencies.kodeinJvm,
         Dependencies.kodeinAndroidX,
         Dependencies.kotlinExtensions,
