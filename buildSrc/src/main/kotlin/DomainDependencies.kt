@@ -1,5 +1,5 @@
 object DomainDependencies {
-    val implementation = arrayOf(
+    val api = arrayOf(
         Dependencies.kotlin
     )
 }

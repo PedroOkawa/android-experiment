@@ -1,10 +1,8 @@
 object DataDependencies {
-    val dataImplementation = arrayOf(
+    val api = arrayOf(
         Dependencies.coroutines,
+        Dependencies.gson,
         Dependencies.kotlin,
         Dependencies.retrofit
-    )
-    val dataApi = arrayOf(
-        Dependencies.gson
     )
 }

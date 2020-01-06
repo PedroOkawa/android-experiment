@@ -1,2 +1,12 @@
 rootProject.name = "AndroidExperiment"
-include(":app", ":core", ":data", ":domain", ":home")
+include(
+    ":app",
+    ":app:feature",
+    ":core",
+    ":core:data",
+    ":core:feature",
+    ":home",
+    ":home:data",
+    ":home:domain",
+    ":home:feature"
+)
