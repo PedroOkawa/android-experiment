@@ -7,6 +7,8 @@ object AppDependencies {
         Dependencies.kodeinJvm,
         Dependencies.kodeinAndroidX,
         Dependencies.kotlinExtensions,
+        Dependencies.navigation,
+        Dependencies.navigationUi,
         Dependencies.retrofit,
         Dependencies.uiFoundation,
         Dependencies.uiFramework,
@@ -16,8 +18,7 @@ object AppDependencies {
     )
 
     val implementation = arrayOf(
-        Dependencies.coil,
-        Dependencies.navigationDynamicFeature
+        Dependencies.coil
     )
 
     val testImplementation = arrayOf(

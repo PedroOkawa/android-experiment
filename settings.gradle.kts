@@ -8,5 +8,6 @@ include(
     ":home",
     ":home:data",
     ":home:domain",
-    ":home:feature"
+    ":home:feature",
+    ":navigation"
 )

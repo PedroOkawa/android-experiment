@@ -11,7 +11,7 @@ object Versions {
     const val jUnit = "4.12"
     const val kodein = "5.2.0"
     const val kotlin = "1.3.61"
-    const val navigationDynamicFeature = "2.3.0-SNAPSHOT"
+    const val navigation = "2.1.0"
     const val okHttpLoggingInterceptor = "4.2.2"
     const val retrofit = "2.7.0"
     const val uiFoundation = "0.1.0-dev03"

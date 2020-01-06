@@ -1,16 +1,11 @@
 package me.okawa.androidexperiment.feature
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
-import androidx.ui.core.setContent
-import androidx.ui.material.MaterialTheme
+import me.okawa.androidexperiment.R
 import me.okawa.androidexperiment.utils.retrieveKodein
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
-import org.kodein.di.generic.instance
 
 class LauncherActivity : AppCompatActivity(), KodeinAware {
     override val kodein = Kodein.lazy {
@@ -28,9 +23,8 @@ class LauncherActivity : AppCompatActivity(), KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_launcher)
         setupViewModel()
-        val intent = Intent(Intent.ACTION_VIEW).setClassName("me.okawa.androidexperiment", "me.okawa.home.feature.HomeActivity")
-        startActivity(intent)
     }
 
     private fun setupViewModel() {

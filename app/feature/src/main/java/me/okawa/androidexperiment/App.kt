@@ -1,7 +1,7 @@
 package me.okawa.androidexperiment
 
 import android.app.Application
-import me.okawa.core.feature.di.appApiModule
+import me.okawa.androidexperiment.core.feature.di.appApiModule
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
