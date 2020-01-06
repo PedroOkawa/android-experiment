@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fragment_home"
-        android:name="me.okawa.androidexperiment.home.feature.HomeFragment"
+        android:name="me.okawa.androidexperiment.home.feature.ui.HomeFragment"
         android:label="Home" />
 
 </navigation>

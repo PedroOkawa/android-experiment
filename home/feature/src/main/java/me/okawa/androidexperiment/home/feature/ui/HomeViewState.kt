@@ -1,4 +1,4 @@
-package me.okawa.androidexperiment.home.feature
+package me.okawa.androidexperiment.home.feature.ui
 
 import me.okawa.androidexperiment.composable.error.errorView
 import me.okawa.androidexperiment.core.feature.ui.ViewState

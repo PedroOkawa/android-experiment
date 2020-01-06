@@ -1,4 +1,4 @@
-package me.okawa.androidexperiment.home.feature
+package me.okawa.androidexperiment.home.feature.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

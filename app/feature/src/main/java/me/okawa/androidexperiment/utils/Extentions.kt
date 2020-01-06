@@ -1,14 +1,11 @@
 package me.okawa.androidexperiment.utils
 
-import android.app.Activity
+import android.view.ViewGroup
+import androidx.compose.Composable
+import androidx.compose.CompositionContext
 import androidx.fragment.app.Fragment
-import me.okawa.androidexperiment.App
-import org.kodein.di.Kodein
+import androidx.ui.core.setContent
 
-fun Activity.retrieveKodein(): Kodein {
-    return (application as? App)?.kodein ?: throw ClassCastException()
-}
-
-fun Fragment.retrieveKodein(): Kodein {
-    return (requireActivity().application as? App)?.kodein ?: throw ClassCastException()
+fun Fragment.setContent(content: @Composable() () -> Unit): CompositionContext? {
+    return (view as ViewGroup).setContent(content)
 }

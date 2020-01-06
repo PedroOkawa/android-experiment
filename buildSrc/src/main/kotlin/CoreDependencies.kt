@@ -1,8 +1,8 @@
 object CoreDependencies {
     val implementation = arrayOf(
         Dependencies.appCompat,
-        Dependencies.kodeinJvm,
-        Dependencies.kodeinAndroidX,
+        Dependencies.koinAndroidXScope,
+        Dependencies.koinAndroidXViewModel,
         Dependencies.kotlinExtensions,
         Dependencies.okHttpLoggingInterceptor,
         Dependencies.retrofit,
