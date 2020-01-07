@@ -1,6 +1,6 @@
 object Versions {
     const val androidJUnitExt = "1.1.1"
-    const val androidLifecycle = "2.2.0-alpha01"
+    const val androidLifecycle = "2.3.0-SNAPSHOT"
     const val appCompat = "1.1.0"
     const val coreKtx = "1.1.0"
     const val coroutines = "1.3.3"
@@ -13,7 +13,7 @@ object Versions {
     const val kotlin = "1.3.61"
     const val navigation = "2.1.0"
     const val okHttpLoggingInterceptor = "4.2.2"
-    const val retrofit = "2.7.0"
+    const val retrofit = "2.7.1"
     const val uiFoundation = "0.1.0-dev03"
     const val uiFramework = "0.1.0-dev03"
     const val uiLayout = "0.1.0-dev03"

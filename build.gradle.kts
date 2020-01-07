@@ -3,7 +3,6 @@ import java.net.URI
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    extra["kotlin_version"] = "1.3.61"
     repositories {
         google()
         jcenter()
