@@ -1,13 +1,14 @@
 rootProject.name = "AndroidExperiment"
 include(
+    ":account",
+    ":account:settings",
     ":app",
-    ":app:feature",
+    ":app:launcher",
     ":core",
     ":core:data",
     ":core:feature",
-    ":home",
-    ":home:data",
-    ":home:domain",
-    ":home:feature",
-    ":navigation"
+    ":launches",
+    ":launches:data",
+    ":launches:domain",
+    ":launches:home"
 )

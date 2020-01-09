@@ -8,6 +8,7 @@ object AppDependencies {
         Dependencies.koinAndroidXViewModel,
         Dependencies.kotlinExtensions,
         Dependencies.navigation,
+        Dependencies.navigationDynamicFeature,
         Dependencies.navigationUi,
         Dependencies.retrofit,
         Dependencies.uiFoundation,

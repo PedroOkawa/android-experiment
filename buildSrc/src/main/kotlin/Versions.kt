@@ -12,6 +12,7 @@ object Versions {
     const val koin = "2.0.1"
     const val kotlin = "1.3.61"
     const val navigation = "2.1.0"
+    const val navigationDynamicFeature = "2.3.0-SNAPSHOT"
     const val okHttpLoggingInterceptor = "4.2.2"
     const val retrofit = "2.7.1"
     const val uiFoundation = "0.1.0-dev03"

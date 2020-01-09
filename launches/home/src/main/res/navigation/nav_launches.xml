@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/nav_launches"
+    app:startDestination="@+id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="me.okawa.androidexperiment.launches.feature.home.HomeFragment"
+        android:label="Home">
+
+        <action
+            android:id="@+id/action_to_details"
+            app:destination="@id/fragment_details" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_details"
+        android:name="me.okawa.androidexperiment.launches.feature.details.DetailsFragment"
+        android:label="Details">
+        <argument
+            android:name="flightNumber"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+</navigation>
