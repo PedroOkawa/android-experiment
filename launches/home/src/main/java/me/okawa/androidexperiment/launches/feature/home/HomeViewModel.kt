@@ -17,6 +17,10 @@ class HomeViewModel(private val launchesUseCase: LaunchesUseCase) : ViewModel() 
         emit(retrieveLaunches())
     }
 
+    fun onBackPressed() {
+        _navigation.postValue(Navigation.Finish)
+    }
+
     private suspend fun retrieveLaunches(): HomeViewState {
         return when (val result = launchesUseCase.retrieveLaunches()) {
             is Result.Success -> onSuccess(result.value)
@@ -38,5 +42,6 @@ class HomeViewModel(private val launchesUseCase: LaunchesUseCase) : ViewModel() 
 
     sealed class Navigation {
         data class Details(val flightNumber: Int) : Navigation()
+        object Finish : Navigation()
     }
 }

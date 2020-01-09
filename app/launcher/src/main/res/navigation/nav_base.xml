@@ -7,7 +7,13 @@
     <fragment
         android:id="@+id/fragment_launcher"
         android:name="me.okawa.androidexperiment.ui.LauncherFragment"
-        android:label="Launcher" />
+        android:label="Launcher">
+
+        <action
+            android:id="@+id/action_to_launches"
+            app:destination="@id/nav_launches" />
+
+    </fragment>
 
     <include-dynamic
         android:id="@+id/nav_launches"

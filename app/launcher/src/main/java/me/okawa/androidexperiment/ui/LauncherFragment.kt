@@ -45,7 +45,8 @@ class LauncherFragment : BaseFragment() {
     }
 
     private fun onNavigateHome() {
-        navigateTo(R.id.nav_launches)
+        val direction = LauncherFragmentDirections.actionToLaunches()
+        navigateTo(direction)
     }
 
 }

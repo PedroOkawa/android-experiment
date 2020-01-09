@@ -6,7 +6,7 @@ import org.koin.dsl.module
 
 object LauncherModule {
 
-    private val viewModelsModule = module {
+    private val viewModelsModule = module(override = true) {
         viewModel { LauncherViewModel() }
     }
 

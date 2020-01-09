@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.lifecycle.Observer
 import androidx.ui.material.MaterialTheme
 import me.okawa.androidexperiment.core.feature.ui.BaseFragment
@@ -19,7 +20,7 @@ class HomeFragment : BaseFragment() {
 
     override val modules: List<Module> = LaunchesModule.modules
 
-    private val homeViewModel: HomeViewModel by viewModel()
+    private val viewModel: HomeViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,11 +32,20 @@ class HomeFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        registerBackPressListener()
         setupViewModel()
     }
 
+    private fun registerBackPressListener() {
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            if (isEnabled) {
+                viewModel.onBackPressed()
+            }
+        }
+    }
+
     private fun setupViewModel() {
-        with(homeViewModel) {
+        with(viewModel) {
             navigation.observe(viewLifecycleOwner, Observer { onNavigation(it) })
             viewState.observe(viewLifecycleOwner, Observer { onViewState(it) })
         }
@@ -44,12 +54,17 @@ class HomeFragment : BaseFragment() {
     private fun onNavigation(navigation: Navigation?) {
         when(navigation) {
             is Navigation.Details -> onDetails(navigation.flightNumber)
+            is Navigation.Finish -> onFinish()
         }
     }
 
     private fun onDetails(flightNumber: Int) {
         val direction = HomeFragmentDirections.actionToDetails(flightNumber)
         navigateTo(direction)
+    }
+
+    private fun onFinish() {
+        requireActivity().finish()
     }
 
     private fun onViewState(viewState: HomeViewState?) {
